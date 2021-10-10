@@ -1,0 +1,30 @@
+
+import java.util.*;
+
+public class Prob01 {
+
+    
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter the number of students:");
+        int numOfStudent = input.nextInt();
+                
+        System.out.println("Enter " + numOfStudent + " scores: ");
+        int student[] = new int[10];
+        
+        for(int i=0; i<numOfStudent; i++)
+        {
+            student[i] = input.nextInt();
+        }
+        int best = largest(student, numOfStudent);
+        
+                
+        
+    }
+    
+    public static int largest(int student[], int num)
+    {
+        Arrays.sort(student);
+        return student[num - 1];
+    }
